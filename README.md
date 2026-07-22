@@ -23,7 +23,7 @@ Asegurate de tener instalado [.NET 8 SDK](https://dotnet.microsoft.com/) y [Node
 
 ### 1. Clonar el repositorio
 \`\`\`bash
-git clone <URL_DE_TU_REPOSITORIO>
+git clone https://github.com/brendilschneider/task-management
 cd task-management
 \`\`\`
 
