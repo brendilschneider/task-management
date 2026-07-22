@@ -9,7 +9,7 @@ import { TaskItem, CreateTaskDto, UpdateTaskDto } from '../models/task.model';
 export class TaskService {
   private http = inject(HttpClient);
   
-  private apiUrl = 'https://localhost:5171/api/tasks'; 
+  private apiUrl = 'http://localhost:5171/api/tasks'; 
 
   getTasks(): Observable<TaskItem[]> {
     return this.http.get<TaskItem[]>(this.apiUrl);

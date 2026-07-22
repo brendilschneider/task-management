@@ -1,0 +1,107 @@
+.task-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  h2 {
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+  }
+
+  .divider {
+    margin: 2rem 0;
+    border: 0;
+    border-top: 1px solid #e0e0e0;
+  }
+
+  h3 {
+    margin-bottom: 1rem;
+    color: #34495e;
+  }
+
+  .empty-state {
+    color: #7f8c8d;
+    font-style: italic;
+  }
+
+  .task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    .task-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      background-color: #fff;
+      transition: all 0.2s ease;
+
+      &.completed {
+        background-color: #f8f9fa;
+        border-color: #dcdcdc;
+
+        .task-title {
+          text-decoration: line-through;
+          color: #8c8c8c;
+        }
+
+        .task-desc {
+          color: #b0b0b0;
+        }
+      }
+
+      .task-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+
+        .task-title {
+          font-weight: 600;
+          font-size: 1.05rem;
+        }
+
+        .task-desc {
+          margin: 0;
+          font-size: 0.9rem;
+          color: #666;
+        }
+      }
+
+      .task-actions {
+        display: flex;
+        gap: 0.5rem;
+
+        button {
+          padding: 0.4rem 0.8rem;
+          border-radius: 4px;
+          border: none;
+          font-size: 0.85rem;
+          cursor: pointer;
+          font-weight: 500;
+          transition: opacity 0.2s;
+
+          &:hover {
+            opacity: 0.85;
+          }
+        }
+
+        .btn-toggle {
+          background-color: #28a745;
+          color: white;
+        }
+
+        .btn-delete {
+          background-color: #dc3545;
+          color: white;
+        }
+      }
+    }
+  }
+}

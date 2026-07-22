@@ -1,3 +1,7 @@
 import { Routes } from '@angular/router';
+import { TaskListComponent } from './tasks/pages/task-list/task-list.component';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+  { path: '', component: TaskListComponent },
+  { path: '**', redirectTo: '' }
+];

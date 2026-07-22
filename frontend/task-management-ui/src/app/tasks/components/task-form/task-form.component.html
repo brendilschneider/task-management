@@ -1,0 +1,28 @@
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()" class="task-form">
+  <div class="form-group">
+    <label for="title">Título:</label>
+    <input 
+      id="title" 
+      type="text" 
+      formControlName="title" 
+      placeholder="¿Qué hay que hacer?" 
+    />
+    @if (taskForm.get('title')?.invalid && taskForm.get('title')?.touched) {
+      <small class="error-text">El título es requerido (mínimo 3 caracteres).</small>
+    }
+  </div>
+
+  <div class="form-group">
+    <label for="description">Descripción:</label>
+    <textarea 
+      id="description" 
+      formControlName="description" 
+      placeholder="Detalles de la tarea..."
+      rows="3">
+    </textarea>
+  </div>
+
+  <button type="submit" [disabled]="taskForm.invalid" class="btn-submit">
+    Guardar Tarea
+  </button>
+</form>
